@@ -5,7 +5,6 @@ public class StartController : MonoBehaviour
 {
     [SerializeField] Text startText;
     [SerializeField] Text rankText;
-    [SerializeField] OpponentController[] opponents;
 
     void Update()
     {

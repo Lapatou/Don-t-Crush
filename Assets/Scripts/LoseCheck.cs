@@ -8,7 +8,6 @@ public class LoseCheck : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<PlayerRanking>().ResetTheProgress();
             other.transform.position = startPos + new Vector3(Random.Range(-9f, 9f), 0f, 0f);
             other.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
