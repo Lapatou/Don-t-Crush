@@ -2,7 +2,11 @@
 
 public class CollisionHandler : MonoBehaviour
 {
-    private Vector3 startPos = new Vector3(0f, 0.05420721f, -45f);
+    private Vector3 startPos;
+    private void Awake()
+    {
+        startPos = GameObject.FindGameObjectsWithTag("Player")[0].transform.position;
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
