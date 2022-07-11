@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class StartController : MonoBehaviour
 {
     [SerializeField] Text startText;
-    [SerializeField] Text rankText;
 
     void Update()
     {
@@ -12,7 +11,6 @@ public class StartController : MonoBehaviour
         {
             
             startText.enabled = false;
-            rankText.enabled = true;
             Destroy(this);
         }
     }

@@ -3,10 +3,11 @@ using UnityEngine.UI;
 
 public class FinishLine : MonoBehaviour
 {
-    [SerializeField] Text timeText;
 
-    private GameObject camera;
+    private new GameObject camera;
     private GameObject player;
+
+    public LevelLoader levelLoader=null;
 
     private void Start()
     {
@@ -23,7 +24,11 @@ public class FinishLine : MonoBehaviour
             camera.GetComponent<CameraMovement>().enabled = false;
             camera.GetComponent<FinishCameraSwitch>().enabled = true;
 
-            timeText.enabled = false;
+            if(levelLoader != null)
+            {
+                levelLoader.LoadNextLevel();
+            }
+
         }
     }
 }
